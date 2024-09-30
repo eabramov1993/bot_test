@@ -105,7 +105,7 @@ func ScrapeDataHalyk(ctx context.Context) ([]Result, error) {
 	defer cancel()
 
 	err := chromedp.Run(ctx,
-		chromedp.Navigate("https://my.prod.platcore.io/pay-out?limit=100&status="),
+		chromedp.Navigate("https://my.prod.platcore.io/pay-out?limit=100&status=new"),
 		chromedp.WaitVisible(`div.css-1q1bux1`, chromedp.ByQuery),
 		chromedp.Sleep(5*time.Second),
 		chromedp.Evaluate(`
