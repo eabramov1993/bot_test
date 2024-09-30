@@ -2,13 +2,12 @@ package telegram
 
 import (
 	"log"
-	"os"
 	"test_bot/internal/handlers"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
-var botToken = os.Getenv("TELEGRAM_TOKEN")
+var botToken = "7527167132:AAENsRMPyPa2k0X4wrE0-fjVZyUOAE6GKNE"
 
 // StartBot запускает бота
 func StartBot() error {
