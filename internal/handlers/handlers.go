@@ -16,6 +16,7 @@ const reset = "\033[0m"
 
 var allowedUsers = map[int64]bool{
 	1924014411: true,
+	816116066:  true,
 }
 
 // var allowedCommands = map[string]bool{
@@ -45,6 +46,7 @@ func HandleCommand(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 			),
 			tgbotapi.NewKeyboardButtonRow(
 				tgbotapi.NewKeyboardButton("Получить данные Халык"),
+				tgbotapi.NewKeyboardButton("Получить данные РБК"),
 			),
 			tgbotapi.NewKeyboardButtonRow(
 				tgbotapi.NewKeyboardButton("Получить данные Jusan"),
@@ -76,6 +78,8 @@ func HandleButton(bot *tgbotapi.BotAPI, update tgbotapi.Update) {
 		source = "jusan"
 	case "Получить данные Bereke":
 		source = "bereke"
+	case "Получить данные РБК":
+		source = "rbk"
 	default:
 		return
 	}
